@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fun.css">
+    <title>Fun</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Are you Stupid ?</h1>
+        <div class="buttons">
+            <button id="yes">YES</button>
+            <button id="no">NO</button>
+        </div>
+        <div class="result">
+            <h1 id="res"></h1>
+            <img src="/javascriptprojects/assets/kid.jpg" alt="kid laughing" class="image">
+        </div>
+    </div>
+    <script>
+        let a=1;
+        const yes = document.getElementById('yes');
+        const no = document.getElementById('no');
+        const res = document.getElementById('res');
+        const result=document.querySelector('.result');
+        const image=document.querySelector('.image');
+        yes.addEventListener('click',()=>{
+
+            image.src="/javascriptprojects/assets/kid.jpg"
+            res.innerHTML=`HAHA I KNEW IT !!! `;
+        })
+        no.addEventListener('click',()=>{
+            image.src="/javascriptprojects/assets/kid cunny.jpg";
+            if(a===1){
+                a=2;
+                res.innerHTML=`DON'T LIE, SAY AGAIN !`;
+                no.disabled=true;
+                no.style.backgroundColor="#d3ec45";
+            }
+        })
+    </script>
+</body>
+</html>
